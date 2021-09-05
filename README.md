@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/m8246m2ttcc30hwf?svg=true)](https://ci.appveyor.com/project/Detrxd/homework-bdd)
