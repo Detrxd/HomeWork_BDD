@@ -7,7 +7,7 @@ import org.openqa.selenium.Keys;
 import static com.codeborne.selenide.Selenide.$;
 
 public class TransferMoneyPage {
-//    SelenideElement header = $("data-test-id='dashboard");
+
     SelenideElement count = $("[data-test-id='amount'] input");
     SelenideElement transferFrom = $("[data-test-id='from'] input");
     SelenideElement transferTo = $("[data-test-id='to']");
@@ -16,7 +16,8 @@ public class TransferMoneyPage {
     SelenideElement errorNotification = $("[data-test-id='error-notification']");
 
     public TransferMoneyPage() {
-        $("[class = 'heading heading_size_xl heading_theme_alfa-on-white']").shouldBe(Condition.visible).shouldHave(Condition.exactText("Пополнение карты"));
+        $("[class = 'heading heading_size_xl heading_theme_alfa-on-white']").shouldBe(Condition.visible)
+                .shouldHave(Condition.exactText("Пополнение карты"));
     }
 
     private void fillAmountAndCardNumber(String amount, String cardNumber) {

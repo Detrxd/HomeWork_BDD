@@ -1,12 +1,11 @@
 package ru.netology.web.page;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import lombok.val;
+
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+
 
 public class DashboardPage {
 
@@ -28,44 +27,25 @@ public class DashboardPage {
     }
 
     public int getFirstCardBalance() {
-        String [] innerText = firstCardBalance.innerText().split(" ");
+        String[] innerText = firstCardBalance.innerText().split(" ");
         int balance = Integer.parseInt(innerText[5]);
         return balance;
     }
 
-    public int getSecondCardBalance(){
-        String [] innerText = secondCardBalance.innerText().split(" ");
+    public int getSecondCardBalance() {
+        String[] innerText = secondCardBalance.innerText().split(" ");
         int secondBalance = Integer.parseInt(innerText[5]);
         return secondBalance;
     }
 
-    public TransferMoneyPage choseFirstCard(){
+    public TransferMoneyPage choseFirstCard() {
         firstCardTransfer.click();
         return new TransferMoneyPage();
     }
 
-    public TransferMoneyPage choseSecondCard(){
+    public TransferMoneyPage choseSecondCard() {
         secondCardTransfer.click();
         return new TransferMoneyPage();
     }
 
-
-//  private ElementsCollection cards = $$(".list__item");
-//  private final String balanceStart = "баланс: ";
-//  private final String balanceFinish = " р.";
-//
-//  public void Dashboard() {
-//  }
-//
-//  public int getFirstCardBalance() {
-//    val text = cards.first().text();
-//    return extractBalance(text);
-//  }
-//
-//  private int extractBalance(String text) {
-//    val start = text.indexOf(balanceStart);
-//    val finish = text.indexOf(balanceFinish);
-//    val value = text.substring(start + balanceStart.length(), finish);
-//    return Integer.parseInt(value);
-//  }
 }
